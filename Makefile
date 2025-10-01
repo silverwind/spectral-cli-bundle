@@ -28,16 +28,16 @@ update: node_modules
 	@touch node_modules
 
 .PHONY: path
-patch: node_modules lint test
+patch: node_modules build
 	npx versions patch package.json package-lock.json
 	@$(MAKE) --no-print-directory build publish
 
 .PHONY: minor
-minor: node_modules lint test
+minor: node_modules build
 	npx versions minor package.json package-lock.json
 	@$(MAKE) --no-print-directory build publish
 
 .PHONY: major
-major: node_modules lint test
+major: node_modules build
 	npx versions major package.json package-lock.json
 	@$(MAKE) --no-print-directory build publish
