@@ -1,0 +1,10 @@
+/.vscode
+/dist
+/node_modules
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
+/bun.lockb
+/__snapshots__
+.DS_Store
+
