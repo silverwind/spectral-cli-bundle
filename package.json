@@ -5,7 +5,7 @@
   "author": "silverwind",
   "repository": "silverwind/spectral-cli-bundle",
   "license": "BSD-2-Clause",
-  "bin": "dist/index.js",
+  "bin": "dist/index.cjs",
   "type": "module",
   "files": [
     "dist"
