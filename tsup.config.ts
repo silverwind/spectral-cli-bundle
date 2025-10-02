@@ -1,4 +1,4 @@
-import {defineConfig} from 'tsup'
+import {defineConfig} from 'tsup';
 
 export default defineConfig({
   entry: ["./node_modules/@stoplight/spectral-cli/dist/index.js"],
@@ -6,4 +6,7 @@ export default defineConfig({
   sourcemap: false,
   shims: true,
   clean: true,
+  esbuildOptions: opts => {
+    opts.legalComments = "none";
+  }
 });
