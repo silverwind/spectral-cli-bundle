@@ -6,6 +6,10 @@ export default defineConfig({
   sourcemap: false,
   shims: true,
   clean: true,
+  format: "esm",
+  banner: () => ({
+    js: `import { createRequire } from 'module'; const require = createRequire(import.meta.url);`,
+  }),
   esbuildOptions: opts => {
     opts.legalComments = "none";
   }

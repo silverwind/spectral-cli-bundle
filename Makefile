@@ -1,5 +1,5 @@
 SOURCE_FILES := node_modules
-DIST_FILES := dist/index.cjs
+DIST_FILES := dist/index.js
 
 node_modules: package-lock.json
 	npm install --no-save
