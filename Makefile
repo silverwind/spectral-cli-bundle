@@ -11,7 +11,7 @@ deps: node_modules
 .PHONY: build
 build: node_modules $(DIST_FILES)
 
-$(DIST_FILES): $(SOURCE_FILES) package-lock.json tsup.config.ts
+$(DIST_FILES): $(SOURCE_FILES) package-lock.json package.json tsup.config.ts
 	npx tsup
 	chmod +x $(DIST_FILES)
 

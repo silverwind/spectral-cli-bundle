@@ -7,6 +7,7 @@ export default defineConfig({
   shims: true,
   clean: true,
   format: "esm",
+  external: ["fsevents"],
   banner: () => ({
     js: `import { createRequire } from 'module'; const require = createRequire(import.meta.url);`,
   }),
