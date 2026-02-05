@@ -42,16 +42,16 @@ publish: node_modules
 
 .PHONY: patch
 patch: node_modules build
-	pnpm exec versions patch package.json pnpm-lock.yaml
+	pnpm exec versions patch package.json
 	git push -u --tags origin master
 
 .PHONY: minor
 minor: node_modules build
-	pnpm exec versions minor package.json pnpm-lock.yaml
+	pnpm exec versions minor package.json
 	git push -u --tags origin master
 
 .PHONY: major
 major: node_modules build
-	pnpm exec versions major package.json pnpm-lock.yaml
+	pnpm exec versions major package.json
 	git push -u --tags origin master
 
