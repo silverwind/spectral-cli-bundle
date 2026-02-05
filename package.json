@@ -23,7 +23,7 @@
   "devDependencies": {
     "@stoplight/spectral-cli": "6.15.0",
     "eslint": "9.39.2",
-    "eslint-config-silverwind": "118.0.1",
+    "eslint-config-silverwind": "120.1.2",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
     "typescript-config-silverwind": "14.0.0",
