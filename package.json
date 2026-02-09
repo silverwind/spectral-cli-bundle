@@ -1,6 +1,6 @@
 {
   "name": "spectral-cli-bundle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Bundled version of @stoplight/spectral-cli",
   "author": "silverwind",
   "repository": "silverwind/spectral-cli-bundle",
