@@ -22,12 +22,14 @@
   },
   "devDependencies": {
     "@stoplight/spectral-cli": "6.15.0",
+    "@typescript/native-preview": "7.0.0-dev.20260212.1",
     "eslint": "9.39.2",
     "eslint-config-silverwind": "120.1.2",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
     "typescript-config-silverwind": "14.0.0",
     "updates": "17.0.8",
+    "updates-config-silverwind": "1.0.3",
     "versions": "14.0.3"
   }
 }
