@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@stoplight/spectral-cli": "6.15.0",
-    "@typescript/native-preview": "7.0.0-dev.20260213.1",
+    "@typescript/native-preview": "7.0.0-dev.20260214.1",
     "eslint": "9.39.2",
     "eslint-config-silverwind": "121.0.5",
     "tsdown": "0.20.3",
