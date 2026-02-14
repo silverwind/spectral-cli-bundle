@@ -25,8 +25,8 @@ test: node_modules
 .PHONY: build
 build: node_modules $(DIST_FILES)
 
-$(DIST_FILES): $(SOURCE_FILES) pnpm-lock.yaml package.json tsup.config.ts
-	pnpm exec tsup
+$(DIST_FILES): $(SOURCE_FILES) pnpm-lock.yaml package.json tsdown.config.ts
+	pnpm exec tsdown
 	chmod +x $(DIST_FILES)
 
 .PHONY: update
