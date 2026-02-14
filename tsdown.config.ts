@@ -1,9 +1,9 @@
+import {nodeCli} from "tsdown-config-silverwind";
 import {defineConfig} from "tsdown";
 
-export default defineConfig({
+export default defineConfig(nodeCli({
+  url: import.meta.url,
   entry: ["./node_modules/@stoplight/spectral-cli/dist/index.js"],
-  minify: true,
-  sourcemap: false,
   shims: true,
   clean: true,
   format: "esm",
@@ -18,7 +18,4 @@ export default defineConfig({
       mainFields: ["module", "main"],
     },
   },
-  outputOptions: {
-    legalComments: "none",
-  },
-});
+}));

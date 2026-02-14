@@ -23,6 +23,9 @@ importers:
       tsdown:
         specifier: 0.20.3
         version: 0.20.3(@typescript/native-preview@7.0.0-dev.20260213.1)(typescript@5.9.3)
+      tsdown-config-silverwind:
+        specifier: 1.7.5
+        version: 1.7.5(tsdown@0.20.3(@typescript/native-preview@7.0.0-dev.20260213.1)(typescript@5.9.3))
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -1695,6 +1698,12 @@ packages:
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
+
+  tsdown-config-silverwind@1.7.5:
+    resolution: {integrity: sha512-S1Q/5weHyifsIjRd+lNzNoh7crY3mI6YrsafUlnzQV+Uf7Ihj0bdfVkh+ePcIf+Z9TBs9YQAcDIVUMVxv8EnsQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      tsdown: '*'
 
   tsdown@0.20.3:
     resolution: {integrity: sha512-qWOUXSbe4jN8JZEgrkc/uhJpC8VN2QpNu3eZkBWwNuTEjc/Ik1kcc54ycfcQ5QPRHeu9OQXaLfCI3o7pEJgB2w==}
@@ -3701,6 +3710,10 @@ snapshots:
   ts-api-utils@2.4.0(typescript@5.9.3):
     dependencies:
       typescript: 5.9.3
+
+  tsdown-config-silverwind@1.7.5(tsdown@0.20.3(@typescript/native-preview@7.0.0-dev.20260213.1)(typescript@5.9.3)):
+    dependencies:
+      tsdown: 0.20.3(@typescript/native-preview@7.0.0-dev.20260213.1)(typescript@5.9.3)
 
   tsdown@0.20.3(@typescript/native-preview@7.0.0-dev.20260213.1)(typescript@5.9.3):
     dependencies:
