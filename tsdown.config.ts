@@ -18,4 +18,9 @@ export default defineConfig(nodeCli({
       mainFields: ["module", "main"],
     },
   },
+  // Set NODE_ENV to "production" to work around a rolldown bug where immer's
+  // CJS development build loses its exports assignments during bundling.
+  env: {
+    NODE_ENV: "production",
+  },
 }));
