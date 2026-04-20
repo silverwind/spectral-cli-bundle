@@ -8,7 +8,7 @@ export default defineConfig(nodeCli({
   clean: true,
   format: "esm",
   target: "node20",
-  external: ["fsevents"],
+  deps: {neverBundle: ["fsevents"]},
   // Rolldown's default mainFields for node is ["main", "module"], which causes
   // jsonc-parser's UMD build to be picked over its ESM build. The UMD build has
   // require("./impl/format") calls that rolldown fails to bundle into ESM output.
