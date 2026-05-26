@@ -22,17 +22,17 @@
     "fsevents": "2.3.3"
   },
   "devDependencies": {
-    "@stoplight/spectral-cli": "6.15.1",
-    "@typescript/native-preview": "7.0.0-dev.20260512.1",
-    "eslint": "10.3.0",
-    "eslint-config-silverwind": "133.0.1",
+    "@stoplight/spectral-cli": "6.16.0",
+    "@typescript/native-preview": "7.0.0-dev.20260526.1",
+    "eslint": "10.4.0",
+    "eslint-config-silverwind": "133.0.4",
     "jest-extended": "7.0.0",
     "tsdown": "0.22.0",
     "tsdown-config-silverwind": "3.0.1",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "18.0.0",
-    "updates": "17.16.10",
+    "updates": "17.17.2",
     "updates-config-silverwind": "3.0.2",
-    "versions": "15.0.3"
+    "versions": "15.0.4"
   }
 }
