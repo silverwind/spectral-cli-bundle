@@ -1,5 +1,6 @@
+BIN := dist/index.js
 SOURCE_FILES := node_modules
-DIST_FILES := dist/index.js
+DIST_FILES := $(BIN)
 
 node_modules: pnpm-lock.yaml
 	pnpm install
@@ -19,8 +20,9 @@ lint-fix: node_modules
 	pnpm exec tsgo
 
 .PHONY: test
-test: node_modules
-	@exit 0
+test: build
+	@node $(BIN) lint --ruleset test/.spectral.yaml test/openapi.yaml >/dev/null
+	@! node $(BIN) lint --ruleset test/.spectral.yaml test/invalid.yaml >/dev/null 2>&1
 
 .PHONY: build
 build: node_modules $(DIST_FILES)

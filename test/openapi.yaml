@@ -1,0 +1,38 @@
+openapi: "3.1.0"
+info:
+  title: Example API
+  version: "1.0.0"
+  description: A minimal OpenAPI document used as a smoke test for the bundled CLI.
+  contact:
+    name: Example
+    url: https://example.com
+    email: api@example.com
+  license:
+    name: BSD-2-Clause
+    url: https://opensource.org/license/bsd-2-clause
+servers:
+  - url: https://api.example.com
+    description: Production server
+tags:
+  - name: health
+    description: Health check operations
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      summary: Health check
+      description: Returns the service health status.
+      tags:
+        - health
+      responses:
+        "200":
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                required:
+                  - status
