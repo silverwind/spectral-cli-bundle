@@ -21,8 +21,7 @@ lint-fix: node_modules
 
 .PHONY: test
 test: build
-	@node $(BIN) lint --ruleset test/.spectral.yaml test/openapi.yaml >/dev/null
-	@! node $(BIN) lint --ruleset test/.spectral.yaml test/invalid.yaml >/dev/null 2>&1
+	@BIN=$(BIN) sh test/test.sh
 
 .PHONY: build
 build: node_modules $(DIST_FILES)

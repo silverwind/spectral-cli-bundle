@@ -2,3 +2,11 @@ savePrefix: ''
 updateNotifier: false
 ignoreScripts: true
 minimumReleaseAge: 0
+
+overrides:
+  # spectral-rulesets 1.22.3 dropped the `@ &&` null guard from the oas
+  # duplicated-entry-in-enum rule's `given`, so linting any spec that contains a
+  # null value crashes with "Cannot read properties of null (reading 'enum')".
+  # https://github.com/stoplightio/spectral/issues/2959
+  # Still broken in 1.22.6 (latest); pin to the last good release until fixed upstream.
+  '@stoplight/spectral-rulesets': '1.22.2'

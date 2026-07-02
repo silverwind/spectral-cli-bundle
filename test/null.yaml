@@ -1,0 +1,42 @@
+openapi: "3.1.0"
+info:
+  title: Null Example API
+  version: "1.0.0"
+  description: >-
+    Regression fixture: a valid document that contains a null value. Older oas
+    rulesets crashed on any null node (see the overrides note in
+    pnpm-workspace.yaml), so this must lint without an internal error.
+  contact:
+    name: Example
+    url: https://example.com
+    email: api@example.com
+  license:
+    name: BSD-2-Clause
+    url: https://opensource.org/license/bsd-2-clause
+servers:
+  - url: https://api.example.com
+    description: Production server
+tags:
+  - name: health
+    description: Health check operations
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      summary: Health check
+      description: Returns the service health status.
+      tags:
+        - health
+      responses:
+        "200":
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                x-null-regression: null
+                properties:
+                  status:
+                    type: string
+                required:
+                  - status
