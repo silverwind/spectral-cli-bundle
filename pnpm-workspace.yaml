@@ -10,3 +10,4 @@ overrides:
   # https://github.com/stoplightio/spectral/issues/2959
   # Still broken in 1.22.6 (latest); pin to the last good release until fixed upstream.
   '@stoplight/spectral-rulesets': '1.22.2'
+confirmModulesPurge: false
