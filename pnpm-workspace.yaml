@@ -11,3 +11,4 @@ overrides:
   # Still broken in 1.22.6 (latest); pin to the last good release until fixed upstream.
   '@stoplight/spectral-rulesets': '1.22.2'
 confirmModulesPurge: false
+verifyDepsBeforeRun: false
