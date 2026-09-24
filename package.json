@@ -14,7 +14,7 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.6.0",
   "engines": {
     "node": ">=20"
   },
@@ -24,15 +24,15 @@
   "devDependencies": {
     "@stoplight/spectral-cli": "6.16.3",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
-    "eslint": "10.10.0",
-    "eslint-config-silverwind": "149.0.0",
+    "eslint": "10.11.0",
+    "eslint-config-silverwind": "151.0.0",
     "jest-extended": "7.0.0",
     "tsdown": "0.23.0",
-    "tsdown-config-silverwind": "4.1.0",
+    "tsdown-config-silverwind": "4.1.1",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "20.0.4",
-    "updates": "18.1.0",
+    "updates": "19.0.0",
     "updates-config-silverwind": "4.0.6",
-    "versions": "15.4.0"
+    "versions": "15.5.0"
   }
 }
