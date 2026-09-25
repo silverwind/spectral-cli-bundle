@@ -191,8 +191,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       typescript-config-silverwind:
-        specifier: 20.0.4
-        version: 20.0.4
+        specifier: 21.0.0
+        version: 21.0.0
       updates:
         specifier: 19.0.0
         version: 19.0.0
@@ -2082,8 +2082,8 @@ packages:
     resolution: {integrity: sha512-phPGCwqr2+Qo0fwniCE8e4pKnGu/yFb5nD5Y8bf0EEeiI5GklnACYA9GFy/DrAeRrKHXvHn+1SUsOWgJp6RO+g==}
     engines: {node: '>= 0.4'}
 
-  typescript-config-silverwind@20.0.4:
-    resolution: {integrity: sha512-DuKWELOunfUcQEXrjED0fJN93kmPJlBbYlaBSIagxRSzlzNIlW7BBnmvrWojx/+QdHfV37EQGpxbZNSJ7SCOEA==}
+  typescript-config-silverwind@21.0.0:
+    resolution: {integrity: sha512-R3T6SKvIM5KTHT9LovnRspYqvkcwWexKnzngSflDe35sgE6zVDwEoyaucURv5xrSF/IyqnmLUm/Qp/Js6OBC8w==}
 
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
@@ -4181,7 +4181,7 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typescript-config-silverwind@20.0.4: {}
+  typescript-config-silverwind@21.0.0: {}
 
   typescript@6.0.3: {}
 
