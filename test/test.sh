@@ -4,7 +4,7 @@ set -eu
 fail() { printf 'FAIL: %s\n' "$1" >&2; exit 1; }
 
 check() {
-  out=$(node "${BIN:-dist/index.js}" lint --ruleset test/.spectral.yaml "$1" 2>&1) && rc=0 || rc=$?
+  out=$(node dist/index.js lint --ruleset test/.spectral.yaml "$1" 2>&1) && rc=0 || rc=$?
   case "$out" in
     *"Error running Spectral"*) printf '%s\n' "$out" >&2; fail "$1: spectral crashed" ;;
   esac
