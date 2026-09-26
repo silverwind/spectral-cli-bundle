@@ -22,6 +22,4 @@ jobs:
         with:
           cache: pnpm
           node-version: ${{matrix.node}}
-      - run: make deps
-      - run: make lint
-      - run: make test
+      - run: make deps lint test build
