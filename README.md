@@ -6,8 +6,7 @@
 ## Usage
 
 ```sh
-pnpm add -D spectral-cli-bundle
-pnpm exec spectral lint openapi.yaml
+pnpm dlx spectral-cli-bundle lint openapi.yaml
 ```
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence
