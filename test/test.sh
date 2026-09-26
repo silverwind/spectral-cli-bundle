@@ -15,4 +15,6 @@ check test/openapi.yaml 0
 check test/null.yaml 0
 check test/invalid.yaml 1
 
+[ "$(node dist/index.js --version)" = "$(node -p 'require("@stoplight/spectral-cli/package.json").version')" ] || fail "--version: not the @stoplight/spectral-cli version"
+
 echo "ok"
