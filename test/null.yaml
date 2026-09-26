@@ -3,9 +3,10 @@ info:
   title: Null Example API
   version: "1.0.0"
   description: >-
-    Regression fixture: a valid document that contains a null value. Older oas
-    rulesets crashed on any null node (see the overrides note in
-    pnpm-workspace.yaml), so this must lint without an internal error.
+    Regression fixture: a valid document that contains a null value. Some oas
+    rulesets crashed on any null node
+    (https://github.com/stoplightio/spectral/issues/2959), so this must lint
+    without an internal error.
   contact:
     name: Example
     url: https://example.com
