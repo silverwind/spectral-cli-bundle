@@ -1,0 +1,16 @@
+asyncapi: 3.0.0
+info:
+  title: Example API
+  version: 1.0.0
+channels:
+  health:
+    address: health
+    messages:
+      status:
+        payload:
+          type: object
+operations:
+  receiveHealth:
+    action: receive
+    channel:
+      $ref: "#/channels/health"

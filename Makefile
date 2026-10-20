@@ -20,7 +20,7 @@ lint-fix: node_modules
 
 .PHONY: test
 test: node_modules build
-	sh test/test.sh
+	pnpm exec vitest
 
 .PHONY: build
 build: node_modules $(DIST_FILES)

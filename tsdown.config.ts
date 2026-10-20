@@ -12,7 +12,22 @@ export default defineConfig(nodeCli({
     transform(code: string, id: string) {
       if (!id.endsWith("/@stoplight/spectral-cli/dist/index.js")) return;
       if (!code.includes(".version()")) throw new Error(`spectral-cli no longer contains ".version()"`);
-      return code.replace(".version()", `.version(${JSON.stringify(spectralCli.version)})`);
+      return code.replace(".version()", () => `.version(${JSON.stringify(spectralCli.version)})`);
+    },
+  }, {
+    name: "nimma-fallback", // nimma puts a stringified function into a template literal, which breaks on the minifier's backtick strings
+    transform(code: string, id: string) {
+      if (!id.endsWith("/nimma/dist/cjs/codegen/fallback.js")) return;
+      const fixed = code.replace(/builders\.templateLiteral\(\[builders\.templateElement\(\{\s*raw: (`return \$\{this\.extraCode\}`)\s*\}\)\], \[\]\)/, (_match, raw) => `builders.stringLiteral(${raw})`);
+      if (fixed === code) throw new Error(`nimma no longer contains the fallback template literal`);
+      return fixed;
+    },
+  }, {
+    name: "module-require", // rolldown's CommonJS wrapper lacks module.require
+    transform(code: string, id: string) {
+      if (!/\/(stacktracey\/stacktracey|get-source\/get-source)\.js$/.test(id)) return;
+      if (!code.includes("module.require")) throw new Error(`${id} no longer contains "module.require"`);
+      return code.replace("module.require", "require");
     },
   }],
   inputOptions: {

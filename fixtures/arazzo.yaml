@@ -1,0 +1,15 @@
+arazzo: 1.0.1
+info:
+  title: Example workflow
+  version: 1.0.0
+sourceDescriptions:
+  - name: example
+    url: ./openapi.yaml
+    type: openapi
+workflows:
+  - workflowId: checkHealth
+    steps:
+      - stepId: getHealth
+        operationId: getHealth
+        successCriteria:
+          - condition: $statusCode == 200
